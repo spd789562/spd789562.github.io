@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Ycau&#39;s Blog</title>
+  <title>Les&#39;s Blog</title>
   
   <link href="/atom.xml" rel="self"/>
   
@@ -9,7 +9,7 @@
   <id>https://spd789562.github.io/</id>
   
   <author>
-    <name>Ycau</name>
+    <name>Les</name>
     
   </author>
   
