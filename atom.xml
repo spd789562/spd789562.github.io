@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://spd789562.github.io/"/>
-  <updated>2016-09-11T14:55:43.083Z</updated>
+  <updated>2016-09-13T15:25:51.494Z</updated>
   <id>https://spd789562.github.io/</id>
   
   <author>
@@ -14,6 +14,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一日一設計模式-工廠設計模式</title>
+    <link href="https://spd789562.github.io/2016/09/13/redux_first/"/>
+    <id>https://spd789562.github.io/2016/09/13/redux_first/</id>
+    <published>2016-09-12T16:14:28.046Z</published>
+    <updated>2016-09-13T15:25:51.494Z</updated>
+    
+    <content type="html"><![CDATA[<p> 廢話不多說，直接上代碼<br> 來自 <a href="http://blog.jobbole.com/29454/" target="_blank" rel="external">常用的Javascript设计模式</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">function A( name )&#123;</div><div class="line"></div><div class="line">       this.name = name;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">function ObjectFactory()&#123;</div><div class="line">      //建造一個空實例</div><div class="line">       var obj = &#123;&#125;,  </div><div class="line">      //切割出入參數的第一個(function)</div><div class="line">       Constructor = Array.prototype.shift.call( arguments );</div><div class="line">//將obj原型指向 Constructor.prototype 或是 Object.prototype //讓obj保持原狀或乾淨</div><div class="line">obj.__proto__ =  typeof Constructor .prototype === &apos;number&apos;  ? Object.prototype</div><div class="line"></div><div class="line">:  Constructor .prototype;</div><div class="line"></div><div class="line">       var ret = Constructor.apply( obj, arguments );</div><div class="line">   </div><div class="line">       return typeof ret === &apos;object&apos; ? ret : obj;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">var a = ObjectFactory( A, &apos;svenzeng&apos; );</div><div class="line"></div><div class="line">alert ( a.name );  //svenzeng</div></pre></td></tr></table></figure>
+<p>這就是一段new的簡單實現<br>日後會在編輯這篇文章</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt; 廢話不多說，直接上代碼&lt;br&gt; 來自 &lt;a href=&quot;http://blog.jobbole.com/29454/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;常用的Javascript设计模式&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;high
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>test-Hexo</title>
